@@ -1,0 +1,51 @@
+.eventItem {
+    padding: 10px;
+    border-radius: var(--border-radius-10);
+    background-color: var(--color-bg-secondary);
+}
+
+.eventItemActive {
+    max-width: 90%;
+    min-height: 120px;
+    padding: 15px;
+    border-radius: var(--border-radius-8);
+    background-color: #1db497;
+    box-shadow: rgba(52, 121, 91, 0.4) 0rem 0.875rem 1.625rem -0.75rem, rgba(76, 175, 80, 0.15) 0rem 0.25rem 1.4375rem 0rem, rgba(76, 175, 80, 0.2) 0rem 0.5rem 0.625rem -0.3125rem;
+
+    &.eventItemPast {
+        background-color: var(--color-bg-error);
+        color: var(--color-text-error);
+        box-shadow: rgba(244, 67, 53, 0.4) 0rem 0.875rem 1.625rem -0.75rem, rgba(244, 67, 53, 0.15) 0rem 0.25rem 1.4375rem 0rem, rgba(244, 67, 53, 0.2) 0rem 0.5rem 0.625rem -0.3125rem;
+    }
+
+    &.eventItemToday {
+        background-color: var(--color-accent-secondary);
+        box-shadow: rgba(52, 105, 121, 0.4) 0rem 0.875rem 1.625rem -0.75rem, rgba(76, 149, 175, 0.15) 0rem 0.25rem 1.4375rem 0rem, rgba(76, 175, 139, 0.2) 0rem 0.5rem 0.625rem -0.3125rem;
+    }
+}
+
+.editBtn {
+    margin-left: auto;
+}
+
+.refreshIcon {
+    margin-top: 1px;
+}
+
+.expandBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px 0;
+}
+
+.expandBtn:hover {
+  opacity: 0.6;
+}
+
+.title {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

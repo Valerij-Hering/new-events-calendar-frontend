@@ -1,0 +1,23 @@
+.containerUserProfile {
+    position: relative;
+    cursor: pointer;
+}
+
+.mailIcon {
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    border-radius: 50%;
+    position:absolute;
+    right: -3px;
+    top: -3px;
+}
+
+.mailIcon svg {
+    width: 13px;
+    opacity: 0.9;
+}
+
+.containerUserProfile:hover svg{
+    fill: var(--color-accent-secondary);
+}

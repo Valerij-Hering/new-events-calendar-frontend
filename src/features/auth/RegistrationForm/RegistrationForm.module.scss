@@ -1,0 +1,66 @@
+@use '@/app/styles/media-queries.scss' as *;
+
+.container_signup {
+    margin: 20px 0;
+    max-width: 510px;
+    background-color: var(--color-bg-primary);
+    border-radius: var(--border-radius-10);
+    padding: 40px 30px;
+    font-family: var(--font-family-poppins-400);
+    box-shadow: var(--shadow-elevation-modal);
+    @include mobile-590 {
+        padding: 50px 15px;
+        box-shadow: none;
+    }
+}
+
+.diskr {
+    opacity: 0.7;
+    text-align: start;
+}
+
+.rules {
+    color: var(--black-color);
+    text-decoration: underline;
+}
+
+.login_link {
+    color: var(--light-green-color);
+    text-decoration: underline;
+}
+
+.container_inputPass {
+    position: relative;
+}
+
+.togglePasswordBtn {
+    position: absolute;
+    top: 54px;
+    right: 12px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    opacity: 0.6;
+}
+
+.btn {
+    width: 100%;
+    padding: 15px 0;
+    border-radius: 50px;
+    background-color: rgb(6, 118, 255);
+    color: white;
+}
+
+.containerSuccess {
+    height: 100vh;
+}
+
+.subcontainerSuccess {
+    max-width: 500px;
+    background-color: var(--color-bg-primary);
+    border-radius: var(--border-radius-10);
+    box-shadow: var(--shadow-elevation-modal);
+    padding: 40px 30px;
+}

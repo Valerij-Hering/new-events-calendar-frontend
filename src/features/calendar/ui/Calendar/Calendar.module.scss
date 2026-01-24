@@ -1,0 +1,10 @@
+@use '@/app/styles/media-queries.scss' as *;
+
+.containerColendar {
+    position: relative;
+    max-width: 95%;
+    @include mobile-768 {
+        max-width: 100%;
+        margin-top: 80px;
+    }
+}

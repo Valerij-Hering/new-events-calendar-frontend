@@ -1,0 +1,25 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal {
+  background: var(--color-bg-secondary);
+  padding: 24px;
+  border-radius: var(--border-radius-10);
+  max-width: 500px;
+  box-shadow: var(--shadow-elevation-modal);
+}
+
+.modalLinkBtn {
+    background: transparent;
+    border: none;
+    text-decoration: underline;
+    color: var(--color-text-primary);
+}
+

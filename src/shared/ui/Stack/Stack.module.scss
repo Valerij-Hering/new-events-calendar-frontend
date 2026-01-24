@@ -1,0 +1,83 @@
+$gaps: (
+    4: var(--gap-4),
+    8: var(--gap-8),
+    12: var(--gap-12),
+    16: var(--gap-16),
+    24: var(--gap-24),
+    32: var(--gap-32),
+    48: var(--gap-48),
+    64: var(--gap-64)
+);
+
+
+@each $gap, $value in $gaps {
+    .gap#{$gap} {
+        gap: #{$value};
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.justifyStart {
+    justify-content: flex-start;
+}
+
+.justifyCenter {
+    justify-content: center;
+}
+
+.justifyEnd {
+    justify-content: flex-end;
+}
+
+.justifyBetween {
+    justify-content: space-between;
+}
+
+.justifyEvenly {
+    justify-content: space-evenly;
+}
+
+
+.justifyAround {
+    justify-content: space-around;
+}
+
+.alignStart {
+    align-items: flex-start;
+}
+
+.alignCenter {
+    align-items: center;
+}
+
+.alignEnd {
+    align-items: flex-end;
+}
+
+.alignStretch {
+    align-items: stretch;
+}
+
+.directionRow {
+    flex-direction: row;
+}
+
+.directionColumn {
+    flex-direction: column;
+}
+
+.directionColumnReverse {
+    flex-direction: column-reverse;
+}
+
+.fullWidth {
+    width: 100%;
+}
+

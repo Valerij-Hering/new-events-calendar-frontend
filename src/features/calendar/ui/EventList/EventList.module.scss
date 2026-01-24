@@ -1,0 +1,38 @@
+@use '@/app/styles/media-queries.scss' as *;
+
+.containerList {
+    
+    max-width: 500px;
+    background-color: var(--color-bg-primary);
+    height: 628px;
+    border-radius: var(--border-radius-10);
+    padding: 20px;
+    padding-top: 7px;
+    @include tablet-1024 {
+        max-width: 100%;
+        padding: 0;
+    }
+    @include mobile-768 {
+        max-width: 90%;
+    }
+}
+
+.title {
+    margin-top: 27px;
+}
+
+.header {
+    padding-bottom: 10px;
+}
+
+.allEventsContainer {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    border-radius: var(--border-radius-10);
+    min-height: 519px;
+    padding-bottom: 60px;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+

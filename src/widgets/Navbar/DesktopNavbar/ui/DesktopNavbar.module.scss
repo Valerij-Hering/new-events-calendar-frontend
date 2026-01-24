@@ -1,0 +1,15 @@
+@use '@/app/styles/media-queries.scss' as *;
+
+.desktopNavbar {
+    max-width: 95%;
+    padding: 2rem 0;
+    @include mobile-768 {
+        max-width: 100%;
+        padding: 10px 20px;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        background-color: var(--color-bg-primary);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.136);
+    }
+}

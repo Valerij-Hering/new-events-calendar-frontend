@@ -1,0 +1,45 @@
+.input {
+    border-radius: var(--border-radius-10);
+    border: 1px solid var(--color-border-muted);
+    background: var(--color-bg-secondary);
+    color: var(--color-text-primary);
+    padding: 10px 14px;
+    font-family: var(--font-family-dmsans-400);
+
+    &::placeholder {
+        color: var(--color-text-primary);
+        font-family: var(--font-family-poppins-400);
+        opacity: 0.6;
+    }
+}
+
+.input:focus {
+    outline: none;
+}
+
+.label {
+    color: var(--color-text-primary);
+    font-family: var(--font-family-poppins-400);
+}
+
+// .error {
+//     border-color: var(--color-text-error);
+//     background: var(--palette-red-500);
+//     &::placeholder {
+//         color: var(--color-text-error);
+//         font-family: var(--font-family-poppins-300);
+//         opacity: 0.6;
+//     }
+// }
+
+.success {
+  border-color: var(--color-border-muted);
+}
+
+
+
+
+.fullWidth {
+    width: 100%;
+}
+

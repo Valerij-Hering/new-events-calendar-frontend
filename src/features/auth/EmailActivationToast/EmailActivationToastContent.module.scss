@@ -1,0 +1,27 @@
+.container {
+  text-align: center;
+}
+
+.timerWrapper {
+  position: relative;
+  width: 44px;
+  height: 44px;
+
+  span {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
+
+.progress {
+  transition: stroke-dashoffset 1s linear;
+}
+
+.mailIcon {
+    opacity: 0.5;
+}

@@ -1,0 +1,88 @@
+@use '@/app/styles/media-queries.scss' as *;
+
+.cell {
+  position: relative;
+  width: 100%;
+  max-width: 45px;
+  aspect-ratio: 1 / 1; 
+  border-radius: 50px;
+  cursor: pointer;
+  border: 1.5px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+    @include mobile-768 {
+      max-width: 100%;
+      height: 35px;
+    }
+
+
+  &.active {
+    background-color: var(--color-bg-success); // зелёный для активных
+    box-shadow: rgba(52, 121, 91, 0.4) 0rem 0.875rem 1.625rem -0.75rem, rgba(76, 175, 80, 0.15) 0rem 0.25rem 1.4375rem 0rem, rgba(76, 175, 80, 0.2) 0rem 0.5rem 0.625rem -0.3125rem;
+  }
+
+  &.past {
+    background-color: var(--palette-red-500); // красный для прошедших
+    box-shadow: rgba(151, 39, 31, 0.4) 0rem 0.875rem 1.625rem -0.75rem, rgba(244, 67, 53, 0.15) 0rem 0.25rem 1.4375rem 0rem, rgba(244, 67, 53, 0.2) 0rem 0.5rem 0.625rem -0.3125rem;
+  }
+
+  &.today {
+    background-color: var(--color-accent-secondary);
+    color: var(--color-text-inverse);
+    border: 1.5px solid var(--color-accent-secondary);
+    box-shadow: rgba(52, 105, 121, 0.4) 0rem 0.875rem 1.625rem -0.75rem, rgba(76, 149, 175, 0.15) 0rem 0.25rem 1.4375rem 0rem, rgba(76, 175, 139, 0.2) 0rem 0.5rem 0.625rem -0.3125rem;
+  }
+
+  &.selected {
+    border: 1.5px solid var(--color-accent-secondary);
+
+    &.pastDate {
+  color: var(--color-text-secondary); // серый цвет для прошедших дат
+   opacity: 0.5;    // если нужно, чтобы фон не менялся
+}
+
+    // если выбранная дата активная
+    &.active {
+      border: 1.5px solid var(--palette-green-900);
+    }
+
+    // если выбранная дата прошедшая
+    &.past {
+      border: 1.5px solid var(--color-bg-error);
+    }
+
+    &.today {
+    border: 1.5px solid var(--color-accent-secondary);
+  }
+  }
+}
+
+.eventCount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  border-radius: 50px;
+  border: 2px solid var(--color-text-inverse);
+  background-color: var(--palette-red-700);
+  @include mobile-768 {
+      right: -9px;
+      top: -9px;
+    }
+}
+
+.holidayDot {
+  position: absolute;
+  bottom: 4px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: orange;
+  margin-top: 2px;
+}

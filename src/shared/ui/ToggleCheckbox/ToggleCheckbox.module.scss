@@ -1,0 +1,71 @@
+.toggleWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+
+  &[data-disabled="true"],
+  &[data-disabled="true"] .toggle {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+}
+
+.toggle {
+  position: relative;
+  width: 52px;
+  height: 28px;
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  background: #e5e7eb;
+  border-radius: 999px;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+
+
+  &::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    transition: 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+}
+
+// iOS shadow + smoothness
+.input:checked + .slider {
+  background: var(--color-accent-primary);
+
+  &::before {
+    transform: translateX(24px);
+    animation: bounce 0.35s ease;
+  }
+}
+
+// spring bounce animation
+@keyframes bounce {
+  0% { transform: translateX(24px) scale(1); }
+  50% { transform: translateX(24px) scale(1.15); }
+  100% { transform: translateX(24px) scale(1); }
+}
+
+// optional disabled fix for highlight block
+.toggleWrapper[data-disabled="true"] .slider {
+  background: #d1d5db;
+}

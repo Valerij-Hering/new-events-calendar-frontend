@@ -1,0 +1,39 @@
+@use '@/app/styles/media-queries.scss' as *;
+
+
+.containerCalendarGrid {
+    max-width: 650px;
+    background-color: var(--color-bg-primary);
+    height: 628px;
+    border-radius: var(--border-radius-10);
+    padding: 20px;
+    @include tablet-1024 {
+        max-width: 100%;
+        height: 550px;
+    }
+    @include mobile-768 {
+        height: 500px;
+    }
+}
+
+.containerCells {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-columns: 30px;
+}
+
+.containerHeader {
+    max-width: 160px;
+}
+
+.monthYears {
+    text-transform: uppercase;
+}
+
+.holidayDot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50px;
+    background-color: orange;
+}

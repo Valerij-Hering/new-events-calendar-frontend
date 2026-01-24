@@ -1,0 +1,180 @@
+{
+    "languages": {
+        "en": "English",
+        "de": "German",
+        "ru": "Russian"
+    },
+    "userNavProfil": {
+        "Guest": "Guest"
+    },
+    "eventList": {
+        "Your Events": "Your Events",
+        "All Events": "All Events",
+        "Show all events": "Show all",
+        "No events": "No events",
+        "Loading events...": "Loading events...",
+        "Error loading events": "Error loading events",
+        "No events for this date": "No events for this date",
+        "Please log in to see your events": "Please log in to see your events"
+    },
+    "eventItem": {
+        "All Day": "All day",
+        "editModal": {
+            "Edit": "Edit",
+            "Repeat": "Repeat",
+            "Repeat weekly": "Repeat weekly",
+            "Delete": "Delete",
+            "openModal": {
+                "Delete event?": "Delete event?",
+                "You won’t be able to undo this action": "You won’t be able to undo this action"
+            }
+        },
+        "toast": {
+                "Event deleted": "Event deleted",
+                "Failed to delete event": "Failed to delete event",
+                "Move failed": "Move failed",
+                "Event moved": "Event moved",
+                "Auto-shift enabled": "Auto-shift enabled",
+                "Auto-shift disabled": "Auto-shift disabled",
+                "Auto-shift failed": "Auto-shift failed"
+            },
+        "remaining": {
+            "today": "today",
+            "days_one": "in {{count}} day",
+            "days_other": "in {{count}} days",
+            "weeks_one": "in {{count}} week",
+            "weeks_other": "in {{count}} weeks",
+            "months_one": "in {{count}} month",
+            "months_other": "in {{count}} months",
+            "years_one": "in {{count}} year",
+            "years_other": "in {{count}} years",
+            "passed": "Event passed"
+        }
+    },
+    "activationToastContent": {
+        "Email Confirmation": "Email Confirmation",
+        "We sent an email to": "We sent an email to",
+        "Please confirm your email address.": "Please confirm your email address.",
+        "If you didn't receive it, check Spam or request resend": "If you didn't receive it, check Spam or request resend",
+        "timer": {
+            "s": "s"
+        }
+    },
+    "form":{
+        "Sign Up": "Sign Up",
+        "Log In": "Log In",
+        "Log in": "Log in",
+        "Sign up": "Sign up",
+        
+        "registrationForm": {
+            "Sign Up": "Sign Up",
+            "Fill your information below or register with your social account": "Fill your information below or register with your social account",
+            "Agree with": "Agree with",
+            "Teams & Condition": "Teams & Condition",
+            "and": "and",
+            "Privacy Policy": "Privacy Policy",
+            "Allready have an Account?": "Allready have an Account?",
+            "registrationSuccess": {
+                "Registration Successful!": "Registration Successful!",
+                "Congratulations, you have successfully registered on our website.": "Congratulations, you have successfully registered on our website",
+                "We sent a confirmation link to your email": "We sent a confirmation link to email",
+                "Please confirm your account by clicking the link in the email": "Please confirm your account by clicking the link in the email",
+                "If you didn't receive it, check Spam or request resend": "If you didn't receive it, check Spam or request resend"
+            }
+        },
+        "loginForm": {
+            "Please fill your detail to access your account": "Please fill your detail to access your account",
+            "Forgot Password?": "Forgot Password?",
+            "Don't have an account?": "Don't have an account?"
+        },
+        "resetPasswordForm": {
+            "Reset Password": "Reset Password",
+            "Don't worry. W'll send you reset instructions": "Don't worry. W'll send you reset instructions",
+            "Remember password?": "Remember password?",
+            "Password reset instructions have been sent to your email address": "Password reset instructions have been sent to your email address"
+        },
+        "changePasswordForm": {
+            "Change Password": "Change Password",
+            "Enter a new password to update your current one": "Enter a new password to update your current one",
+            "changePasswordSuccess": {
+                "Password successfully changed!": "Password successfully changed!",
+                "You can now log in with your new password": "You can now log in with your new password"
+            }
+        },
+        "createEventForm": {
+            "Create Event": "Create Event",
+            "Fill your event details below to add a new entry to the calendar": "Fill in the event details below to add a new entry to the calendar",
+            "toast": {
+                "Event created successfully": "Event created successfully",
+                "Event create failed": ".Event create failed",
+                "Event updated successfully": "Event updated successfully",
+                "Event update failed": "Event update failed"
+            }
+        }
+    },
+    "timePicker": {
+        "Select Time": "Select Time"
+    },
+    "datePicker": {
+        "Select Date": "Select Date"
+    },
+    "toast": {
+        "Go to Log in": "Go to Log in",
+        "Password successfully changed!": "Password successfully changed!",
+        "Error changing password. Please try again": "Error changing password. Please try again",
+        "Server is unavailable. Please try again later": "Server is unavailable. Please try again later",
+        "A user with this email already exists": "A user with this email already exists",
+        "An error occurred. Please try again": "An error occurred. Please try again",
+        "Invalid email or password": "Invalid email or password",
+        "Error sending email": "Error sending email",
+        "Please log in to continue": "Please log in to continue"
+    },
+    "button": {
+        "Send": "Send",
+        "Sending...": "Sending...",
+        "Sign Up": "Sign Up",
+        "Signing up...": "Signing up...",
+        "Log In": "Log In",
+        "Log Out": "Log Out",
+        "Loging in...": "Loging in...",
+        "Go to Login": "Go to Login",
+        "Create": "Create",
+        "Update": "Update",
+        "Creating...": "Creating...",
+        "Updating...": "Updating...",
+        "Close": "Close",
+        "Cancel": "Cancel",
+        "OK": "OK",
+        "Delete": "Delete",
+        "Resending...": "Resending...",
+        "Please wait": "Please wait",
+        "Resend confirmation mail": "Resend confirmation mail"
+    },
+    "input": {
+        "placeholder": {
+            "Enter here...": "Enter here...",
+            "Ex. John": "Ex. John",
+            "Ex. Doe": "Ex. Doe",
+            "Your Password": "Your Password",
+            "Your new Password": "Your new Password",
+            "Repeat your password": "Repeat your password",
+            "Your Email": "Your Email",
+            "name@example.com": "name@example.com",
+            "DD.MM.YYYY": "DD.MM.YYYY"
+        },
+        "label": {
+            "Password": "Password",
+            "Email": "Email",
+            "First Name": "First Name",
+            "Last Name": "Last Name",
+            "New Password": "New Password",
+            "Confirm password": "Confirm password",
+            "Start Time": "Start Time",
+            "End Time": "End Time",
+            "Event Date": "Event Date",
+            "Your Event": "Your Event",
+            "All day": "All day",
+            "Repeat weekly": "Repeat weekly"
+        }
+    }
+}

@@ -1,0 +1,178 @@
+{
+    "languages": {
+        "en": "Englisch",
+        "de": "Deutsch",
+        "ru": "Russisch"
+    },
+    "userNavProfil": {
+        "Guest": "Gast"
+    },
+    "eventList": {
+        "Your Events": "Ihre Termine",
+        "All Events": "Alle Termine",
+        "Show all events": "Alle anzeigen",
+        "No events": "Keine Termine",
+        "Loading events...": "Termine werden geladen...",
+        "Error loading events": "Fehler beim Laden der Termine",
+        "No events for this date": "Für dieses Datum gibt es keine Termine",
+        "Please log in to see your events": "Melden Sie sich an, um die Termine zu sehen"
+        },
+    "eventItem": {
+        "All Day": "Ganztägig",
+        "editModal": {
+            "Edit": "Bearbeiten",
+            "Repeat": "Wiederholen",
+            "Repeat weekly": "Wöchentlich wiederholen",
+            "Delete": "Löschen",
+            "openModal": {
+                "Delete event?": "Termin löschen?",
+                "You won’t be able to undo this action": "Diese Aktion kann nicht rückgängig gemacht werden"
+            }
+        },
+        "toast": {
+                "Event deleted": "Ereignis gelöscht",
+                "Failed to delete event": "Ereignis konnte nicht gelöscht werden",
+                "Move failed": "Verschieben fehlgeschlagen",
+                "Event moved": "Termin verschoben",
+                "Auto-shift enabled": "Automatische Terminverschiebung aktiviert",
+                "Auto-shift disabled": "Automatische Terminverschiebung deaktiviert",
+                "Auto-shift failed": "Automatisches Verschieben fehlgeschlagen"
+            },
+        "remaining": {
+            "today": "heute",
+            "days_one": "in {{count}} Tag",
+            "days_other": "in {{count}} Tagen",
+            "weeks_one": "in {{count}} Woche",
+            "weeks_other": "in {{count}} Wochen",
+            "months_one": "in {{count}} Monat",
+            "months_other": "in {{count}} Monaten",
+            "years_one": "in {{count}} Jahr",
+            "years_other": "in {{count}} Jahren",
+            "passed": "Termin vorbei"
+        }
+    },
+    "activationToastContent": {
+        "Email Confirmation": "E-Mail-Bestätigung",
+        "We sent an email to": "Wir haben eine E-Mail an Ihr E-Mail gesendet:",
+        "Please confirm your email address.": "Bitte bestätigen Sie Ihre E-Mail-Adresse",
+        "If you didn't receive it, check Spam or request resend": "Wenn Sie keine E-Mail erhalten haben, überprüfen Sie bitte den Spam-Ordner oder fordern Sie eine erneute Zusendung an.",
+        "timer": {
+            "s": "s"
+        }
+    },
+    "form": {
+        "Log in": "Einloggen",
+        "Sign up": "Registrieren",
+        "Log In": "Anmeldung",
+        "Sign Up": "Registrierung",
+        "registrationForm": {
+            "Fill your information below or register with your social account": "Füllen Sie unten Ihre Informationen aus oder registrieren Sie sich über Ihr Social-Media-Konto",
+            "Agree with": "Ich stimme den",
+            "Teams & Condition": "Allgemeinen Geschäftsbedingungen",
+            "and": "und der",
+            "Privacy Policy": "Datenschutzrichtlinie",
+            "Allready have an Account": "Sie haben bereits ein Konto?",
+            "registrationSuccess": {
+                "Registration Successful!": "Registrierung erfolgreich!",
+                "Congratulations, you have successfully registered on our website.": "Herzlichen Glückwunsch, Sie haben sich erfolgreich auf unserer Website registriert",
+                "We sent a confirmation link to your email": "Wir haben einen Bestätigungslink an Ihre E-Mail gesendet:",
+                "Please confirm your account by clicking the link in the email": "Bitte bestätigen Sie Ihr Konto, indem Sie auf den Link in der E-Mail klicken.",
+                "If you didn't receive it, check Spam or request resend": "Wenn Sie keine E-Mail erhalten haben, prüfen Sie den Spam-Ordner oder fordern Sie eine neue an."
+            }
+        },
+        "loginForm": {
+            "Please fill your detail to access your account": "Bitte füllen Sie Ihre Daten aus, um auf Ihr Konto zuzugreifen",
+            "Forgot Password?": "Passwort vergessen?",
+            "Don't have an account?": "Noch kein Konto?"
+        },
+        "resetPasswordForm": {
+            "Reset Password": "Passwort zurücksetzen",
+            "Don't worry. W'll send you reset instructions": "Keine Sorge. Wir senden Ihnen die Anleitung zum Zurücksetzen des Passworts",
+            "Remember password?": "Passwort wieder eingefallen?",
+            "Password reset instructions have been sent to your email address": "Die Anleitung zum Zurücksetzen des Passworts wurde an Ihre E-Mail-Adresse gesendet"
+        },
+        "changePasswordForm": {
+            "Change Password": "Passwort ändern",
+            "Enter a new password to update your current one": "Geben Sie ein neues Passwort ein, um Ihr aktuelles zu ändern",
+            "changePasswordSuccess": {
+                "Password successfully changed!": "Passwort erfolgreich geändert!",
+                "You can now log in with your new password": "Sie können sich jetzt mit Ihrem neuen Passwort anmelden"
+            }
+        },
+        "createEventForm": {
+            "Create Event": "Termin erstellen",
+            "Fill your event details below to add a new entry to the calendar": "Füllen Sie die Termindaten unten aus, um einen neuen Eintrag im Kalender zu erstellen",
+            "toast": {
+                "Event created successfully": "Ereignis erfolgreich erstellt",
+                "Event create failed": "Ereigniserstellung fehlgeschlagen",
+                "Event updated successfully": "Termin erfolgreich aktualisiert",
+                "Event update failed": "Fehler beim Aktualisieren des Termines"
+            }
+        }
+    },
+    "timePicker": {
+        "Select Time": "Uhrzeit wählen"
+    },
+    "datePicker": {
+        "Select Date": "Datum wählen"
+    },
+    "toast": {
+        "Go to Log in": "Zum Einloggen",
+        "Password successfully changed!": "Passwort erfolgreich geändert!",
+        "Error changing password. Please try again": "Fehler beim Ändern des Passworts. Bitte versuchen Sie es erneut",
+        "Server is unavailable. Please try again later": "Server ist nicht erreichbar. Bitte versuchen Sie es später erneut",
+        "A user with this email already exists": "Ein Benutzer mit dieser E-Mail existiert bereits",
+        "An error occurred. Please try again": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut",
+        "Invalid email or password": "Ungültige E-Mail oder Passwort",
+        "Error sending email": "Fehler beim Senden der E-Mail",
+        "Please log in to continue": "Bitte einloggen"
+    },
+    "button": {
+        "Send": "Senden",
+        "Sending...": "Wird gesendet...",
+        "Sign Up": "Registrierung...",
+        "Signing up...": "Registrieren",
+        "Log In": "Einloggen",
+        "Loging in...": "Anmeldung...",
+        "Log Out": "Abmelden",
+        "Go to Login": "Zum Login",
+        "Create": "Erstellen",
+        "Update": "Aktualisieren",
+        "Creating...": "Wird erstellt…",
+        "Updating...": "Wird aktualisiert…",
+        "Close": "Schließen",
+        "Cancel": "Abbrechen",
+        "OK": "Auswählen",
+        "Delete": "Löschen",
+        "Resending...": "Resending...",
+        "Please wait": "Please wait",
+        "Resend confirmation mail": "Resend confirmation mail"
+    },
+    "input": {
+        "placeholder": {
+            "Enter here...": "Hier eingeben...",
+            "Ex. John": "Z.B.: Max",
+            "Ex. Doe": "Z.B.: Mustermann",
+            "Your Password": "Ihr Passwort",
+            "Your new Password": "Ihr neues Passwort",
+            "Repeat your password": "Passwort wiederholen",
+            "Your Email": "Ihre E-mail",
+            "name@example.com": "name@example.com",
+            "DD.MM.YYYY": "TT.MM.JJJJ"
+        },
+        "label": {
+            "Password": "Passwort",
+            "Email": "E-mail",
+            "First Name": "Vorname",
+            "Last Name": "Nachname",
+            "New Password": "Neues Passwort",
+            "Confirm password": "Passwort bestätigen",
+            "Start Time": "Startzeit",
+            "End Time": "Endzeit",
+            "Event Date": "Termin-Datum",
+            "Your Event": "Ihr Termin",
+            "All day": "Ganztägig",
+            "Repeat weekly": "Wöchentlich wiederholen"
+        }
+    }
+}

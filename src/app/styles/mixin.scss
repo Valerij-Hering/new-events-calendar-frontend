@@ -1,0 +1,16 @@
+@use './media-queries' as *;
+
+@mixin section-style {
+    width: 1200px;
+    margin: auto;
+
+    @include tablet-820 {
+        width: 100%;
+        padding: 0 2rem;
+    }
+
+    @include mobile-590 {
+        padding: 0 1.5rem;
+    }
+}
+

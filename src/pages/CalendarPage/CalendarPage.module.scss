@@ -1,0 +1,11 @@
+@use '@/app/styles/media-queries.scss' as *;
+
+
+.calendarPage {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    @include tablet-1024 {
+        padding: 0;
+    }
+}

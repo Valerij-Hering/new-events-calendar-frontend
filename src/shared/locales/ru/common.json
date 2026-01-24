@@ -1,0 +1,186 @@
+{
+    "languages": {
+        "en": "Английский",
+        "de": "Немецкий",
+        "ru": "Русский"
+    },
+    "userNavProfil": {
+        "Guest": "Гость"
+    },
+    "eventList": {
+        "Your Events": "Ваши события",
+        "All Events": "Все события",
+        "Show all events": "Показать все",
+        "No events": "У вас пока нет событий",
+        "Loading events...": "Загрузка событий...",
+        "Error loading events": "Ошибка при загрузке событий",
+        "No events for this date": "На эту дату событий нет",
+        "Please log in to see your events": "Авторизуйтесь, чтобы увидеть события"
+        },
+    "eventItem": {
+        "All Day": "Весь день",
+        "editModal": {
+            "Edit": "Редактировать",
+            "Repeat": "Повторить",
+            "Repeat weekly": "Повторять еженедельно",
+            "Delete": "Удалить",
+            "openModal": {
+                "Delete event?": "Удалить событие?",
+                "You won’t be able to undo this action": "Это действие необратимо"
+            }
+        },
+        "toast": {
+                "Event deleted": "Событие удалено",
+                "Failed to delete event": "Не удалось удалить событие",
+                "Move failed": "Не удалось перенести событие",
+                "Event moved": "Событие перенесено",
+                "Auto-shift enabled": "Автоперенос включён",
+                "Auto-shift disabled": "Автоперенос отключён",
+                "Auto-shift failed": "Не удалось выполнить автоперенос"
+            },
+        "remaining": {
+            "today": "сегодня",
+            "days_one": "остался {{count}} день",
+            "days_few": "осталось {{count}} дня",
+            "days_many": "осталось {{count}} дней",
+
+            "weeks_one": "осталась {{count}} неделя",
+            "weeks_few": "осталось {{count}} недели",
+            "weeks_many": "осталось {{count}} недель",
+
+            "months_one": "остался {{count}} месяц",
+            "months_few": "осталось {{count}} месяца",
+            "months_many": "осталось {{count}} месяцев",
+
+            "years_one": "остался {{count}} год",
+            "years_few": "осталось {{count}} года",
+            "years_many": "осталось {{count}} лет",
+            "passed": "Событие прошло"
+        }
+    },
+    "activationToastContent": {
+        "Email Confirmation": "Подтверждение эл. почты",
+        "We sent an email to": "Мы отправили письмо на почту",
+        "Please confirm your email address.": "Пожалуйста, подтвердите ваш адрес электронной почты.",
+        "If you didn't receive it, check Spam or request resend": "Если вы не получили письмо, проверьте папку «Спам» или запросите повторную отправку",
+        "timer": {
+            "s": "с"
+        }
+    },
+    "form": {
+        "Log in": "Войти",
+        "Sign up": "Зарегистрироваться",
+        "Log In": "Вход",
+        "Sign Up": "Регистрация",
+        "registrationForm": {
+            "Fill your information below or register with your social account": "Заполните свои данные ниже или зарегистрируйтесь через социальную сеть",
+            "Agree with": "Согласен с",
+            "Teams & Condition": "Правилами и условиями",
+            "and": "и",
+            "Privacy Policy": "Политикой конфиденциальности",
+            "Allready have an Account?": "Уже есть аккаунт?",
+            "registrationSuccess": {
+                "Registration Successful!": "Успешная регистрация!",
+                "Congratulations, you have successfully registered on our website.": "Поздравляю, вы успешно зарегистрировались на нашем сайте",
+                "We sent a confirmation link to your email": "Мы отправили ссылку для подтверждения на почту",
+                "Please confirm your account by clicking the link in the email": "Пожалуйста, подтвердите аккаунт, перейдя по ссылке в письме.",
+                "If you didn't receive it, check Spam or request resend": "Если письмо не пришло — проверьте Спам или запросите отправку заново."
+            }
+        },
+        "loginForm": {
+            "Please fill your detail to access your account": "Пожалуйста, заполните данные, чтобы войти в аккаунт",
+            "Forgot Password?": "Забыли пароль?",
+            "Don't have an account?": "Нет аккаунта?"
+        },
+        "resetPasswordForm": {
+            "Reset Password": "Восстановление пароля",
+            "Don't worry. W'll send you reset instructions": "Не переживайте. Мы отправим вам инструкции для сброса пароля",
+            "Remember password?": "Вспомнили пароль?",
+            "Password reset instructions have been sent to your email address": "Инструкции по сбросу пароля отправлены на ваш адрес электронной почты"
+        },
+        "changePasswordForm": {
+            "Change Password": "Смена пароля",
+            "Enter a new password to update your current one": "Введите новый пароль, чтобы изменить текущий",
+            "changePasswordSuccess": {
+                "Password successfully changed!": "Пароль успешно изменён!",
+                "You can now log in with your new password": "Теперь вы можете войти в аккаунт с новым паролем"
+            }
+        },
+        "createEventForm": {
+            "Create Event": "Создать событие",
+            "Fill your event details below to add a new entry to the calendar": "Заполните данные события ниже, чтобы добавить новую запись в календарь",
+            "toast": {
+                "Event created successfully": "Событие создано",
+                "Event create failed": "Не удалось создать событие",
+                "Event updated successfully": "Событие обновлено",
+                "Event update failed": "Ошибка обновления события"
+            }
+        }
+    },
+    "timePicker": {
+        "Select Time": "Выберите время"
+    },
+    "datePicker": {
+        "Select Date": "Выберите дату"
+    },
+    "toast": {
+        "Go to Log in": "Перейти к входу",
+        "Password successfully changed!": "Пароль изменен!",
+        "Error changing password. Please try again": "Ошибка смены пароля. Попробуйте снова",
+        "Server is unavailable. Please try again later": "Сервер недоступен. Попробуйте позже",
+        "A user with this email already exists": "Пользователь с такой эл. почтой уже существует",
+        "An error occurred. Please try again": "Произошла ошибка. Попробуйте снова",
+        "Invalid email or password": "Неверная эл. почта или пароль",
+        "Error sending email": "Ошибка при отправке эл. почты",
+        "Please log in to continue": "Войдите, чтобы продолжить"
+    },
+    "button": {
+        "Send": "Отправить",
+        "Sending...": "Отправляется...",
+        "Sign Up": "Зарегистрироваться",
+        "Signing up...": "Регистрация...",
+        "Log In": "Войти",
+        "Loging in...": "Вход...",
+        "Log Out": "Выйти",
+        "Go to Login": "Перейти ко входу",
+        "Create": "Создать",
+        "Update": "Обновить",
+        "Creating...": "Создание…",
+        "Updating...": "Обновление…",
+        "Close": "Закрыть",
+        "Cancel": "Отмена",
+        "OK": "Выбрать",
+        "Delete": "Удалить",
+        "Resending...": "Отправка...",
+        "Please wait": "Пожалуйста, подождите",
+        "Resend confirmation mail": "Отправить письмо повторно"
+    },
+    "input": {
+        "placeholder": {
+            "Ex. John": "Нап.: Иван",
+            "Ex. Doe": "Нап.: Иванов",
+            "Enter here...": "Введите здесь...",
+            "Your Password": "Введите пароль",
+            "Your new Password": "Введите новый пароль",
+            "Repeat your password": "Повторите пароль",
+            "Your Email": "Введите эл. почту",
+            "name@example.com": "name@example.com",
+            "DD.MM.YYYY": "ДД.ММ.ГГГГ"
+        },
+        "label": {
+            "Password": "Пароль",
+            "Email": "Эл. почта",
+            "First Name": "Имя",
+            "Last Name": "Фамилия",
+            "New Password": "Новый пароль",
+            "Confirm password": "Подтвердить пароль",
+            "Start Time": "Время начала",
+            "End Time": "Время окончания",
+            "Event Date": "Дата события",
+            "Your Event": "Ваше событие",
+            "All day": "Весь день",
+            "Repeat weekly": "Повторять еженедельно"
+        }
+
+    }
+}
