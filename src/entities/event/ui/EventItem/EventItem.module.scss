@@ -1,3 +1,5 @@
+@use '@/app/styles/media-queries.scss' as *;
+
 .eventItem {
     padding: 10px;
     border-radius: var(--border-radius-10);
