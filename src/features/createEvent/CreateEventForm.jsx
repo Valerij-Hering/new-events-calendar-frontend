@@ -171,7 +171,7 @@ export const CreateEventForm = ({ initialData, onClose }) => {
                     : t("button.Create")
                 }
             </Button>
-            <Button variant="clear" color='dark' type="button" onClick={() => { onClose?.(); !onClose && navigate("/"); }}>
+            <Button variant='subtle' color='dark' noPadding type="button" onClick={() => { onClose?.(); !onClose && navigate("/"); }}>
                 {t("button.Close")}
             </Button>
             </Stack>
