@@ -42,7 +42,7 @@ export const AuthProvider = ({ children }) => {
           try {
             const refreshToken = Cookies.get("refreshToken");
             if (!refreshToken) throw new Error("Нет refresh токена");
-            const res = await axios.post(`${API_URL}/refresh`, { refreshToken });
+            const res = await axios.post(`${API_URL}/refresh`, { refreshToken }, { withCredentials: true });
             const { accessToken: newAccessToken, user: newUser } = res.data;
             setAccessToken(newAccessToken);
             Cookies.set("token", newAccessToken, { expires: 7 });

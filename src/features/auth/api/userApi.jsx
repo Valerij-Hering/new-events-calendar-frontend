@@ -14,7 +14,6 @@ export const apiUrl = config.production
 export const userApi = api.injectEndpoints({
 
   endpoints: (builder) => ({
-
     registration: builder.mutation({
   query: (userData) => ({
     method: "POST",

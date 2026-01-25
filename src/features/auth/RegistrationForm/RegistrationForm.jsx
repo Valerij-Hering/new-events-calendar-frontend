@@ -1,7 +1,7 @@
 import { Stack } from '../../../shared/ui/Stack/Stack';
 import { Text } from "../../../shared/ui/Text/Text";
 import styles from './RegistrationForm.module.scss';
-import { Input } from '../../../shared/ui/Input/Input';
+import { Input } from '@/shared/ui/Input/Input';
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from 'react-hook-form';
 import { textRegex, emailRegex, validatePassword, validMessage } from '../../../shared/lib/validation';

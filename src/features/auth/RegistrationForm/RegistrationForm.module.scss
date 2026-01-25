@@ -8,7 +8,7 @@
     padding: 40px 30px;
     font-family: var(--font-family-poppins-400);
     box-shadow: var(--shadow-elevation-modal);
-    @include mobile-590 {
+    @include mobile-768 {
         padding: 50px 15px;
         box-shadow: none;
     }
@@ -63,4 +63,7 @@
     border-radius: var(--border-radius-10);
     box-shadow: var(--shadow-elevation-modal);
     padding: 40px 30px;
+    @include mobile-768 {
+        box-shadow: none;
+    }
 }
