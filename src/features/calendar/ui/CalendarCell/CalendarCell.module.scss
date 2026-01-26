@@ -70,10 +70,6 @@
   border-radius: 50px;
   border: 2px solid var(--color-text-inverse);
   background-color: var(--palette-red-700);
-  @include mobile-768 {
-      right: -9px;
-      top: -9px;
-    }
 }
 
 .holidayDot {
