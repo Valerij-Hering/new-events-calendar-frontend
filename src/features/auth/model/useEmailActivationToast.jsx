@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { toast } from "react-toastify";
-import { EmailActivationToastContent } from "../ui/EmailActivationToastContent";
+import { EmailActivationToastContent } from "../EmailActivationToastContent/EmailActivationToastContent";
 
 const TOAST_ID = "email-activation-toast";
 const STORAGE_KEY = "emailActivationToastShown";
