@@ -15,10 +15,12 @@ export const AuthProvider = ({ children }) => {
   const [accessToken, setAccessToken] = useState(Cookies.get("token") || null);
   const [isAuthenticated, setIsAuthenticated] = useState(!!accessToken);
   const [resendActivationEmail] = useResendActivationEmailMutation();
+  const [isUserLoading, setIsUserLoading] = useState(true);
 
   useEmailActivationToast({
     isAuthenticated,
     user,
+    isUserLoading,
     resendActivationEmail,
   });
 
@@ -86,7 +88,11 @@ export const AuthProvider = ({ children }) => {
   // 🔹 Загрузка user при инициализации accessToken
   useEffect(() => {
     const fetchUser = async () => {
-      if (!accessToken) return;
+      if (!accessToken) {
+        setIsUserLoading(false);
+        return;
+      }
+
       try {
         const res = await axiosInstance.get("/user");
         setUser(res.data);
@@ -94,8 +100,11 @@ export const AuthProvider = ({ children }) => {
       } catch {
         setUser(null);
         setIsAuthenticated(false);
+      } finally {
+        setIsUserLoading(false);
       }
     };
+
     fetchUser();
   }, [accessToken, axiosInstance]); // axiosInstance в зависимостях
 
@@ -117,7 +126,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated, user, accessToken, login, logout, axiosInstance }}>
+    <AuthContext.Provider value={{ isAuthenticated, user, accessToken, login, logout, axiosInstance, isUserLoading }}>
       {children}
     </AuthContext.Provider>
   );

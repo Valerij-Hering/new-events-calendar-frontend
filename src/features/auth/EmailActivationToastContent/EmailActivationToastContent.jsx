@@ -13,12 +13,14 @@ const RESEND_TIMEOUT = 60;
 const STORAGE_KEY = "emailActivationResendUntil";
 
 export const EmailActivationToastContent = ({
-    email,
+    isAuthenticated,
+    user,
+    isUserLoading,
     resendActivationEmail,
     }) => {
     const [secondsLeft, setSecondsLeft] = useState(0);
     const [isResending, setIsResending] = useState(false);
-    const { t, i18n } = useTranslation("common");
+    const { t } = useTranslation("common");
 
     // 🔄 восстановление таймера после перезагрузки
     useEffect(() => {

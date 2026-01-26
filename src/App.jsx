@@ -1,5 +1,4 @@
 import {Stack} from "./shared/ui/Stack/Stack"
-import './App.css'
 import {  CalendarPage } from "./pages/CalendarPage/CalendarPage"
 import { RouterProvider } from "react-router-dom"
 import { router } from "./app/providers/router/router";

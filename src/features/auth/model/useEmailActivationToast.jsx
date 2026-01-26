@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { toast } from "react-toastify";
-import { EmailActivationToastContent } from "../EmailActivationToast/EmailActivationToastContent";
+import { EmailActivationToastContent } from "../ui/EmailActivationToastContent";
 
 const TOAST_ID = "email-activation-toast";
 const STORAGE_KEY = "emailActivationToastShown";
@@ -8,20 +8,26 @@ const STORAGE_KEY = "emailActivationToastShown";
 export const useEmailActivationToast = ({
   isAuthenticated,
   user,
+  isUserLoading,
   resendActivationEmail,
 }) => {
   useEffect(() => {
-    if (!isAuthenticated || user?.isActivated) {
-      localStorage.removeItem(STORAGE_KEY);
+    if (isUserLoading) return;
+    if (!isAuthenticated) {
       toast.dismiss(TOAST_ID);
+      localStorage.removeItem(STORAGE_KEY);
       return;
     }
-
+    if (user?.isActivated) {
+      toast.dismiss(TOAST_ID);
+      localStorage.removeItem(STORAGE_KEY);
+      localStorage.removeItem("emailActivationResendUntil");
+      return;
+    }
     if (localStorage.getItem(STORAGE_KEY)) return;
-
     toast(
       <EmailActivationToastContent
-        email={user?.email}
+        email={user.email}
         resendActivationEmail={resendActivationEmail}
       />,
       {
@@ -32,15 +38,10 @@ export const useEmailActivationToast = ({
     );
 
     localStorage.setItem(STORAGE_KEY, "true");
-  }, [isAuthenticated, user, resendActivationEmail]);
-
-  useEffect(() => {
-  if (!isAuthenticated) return;
-
-  if (user?.isActivated) {
-    toast.dismiss("email-activation-toast");
-    localStorage.removeItem("emailActivationResendUntil");
-    localStorage.removeItem("emailActivationToastShown");
-  }
-}, [user?.isActivated, isAuthenticated]);
+  }, [
+      isAuthenticated,
+      user,
+      isUserLoading,
+      resendActivationEmail,
+  ]);
 };
