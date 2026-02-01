@@ -10,6 +10,8 @@ import { EditUserProfile } from "../editUserProfile/EditUserProfile";
 import { useBoolean } from "../../../../shared/hooks/useBoolean";
 import { useRef } from "react";
 import { useEffect } from "react";
+import { SettingsIcon } from "../../../../assets/svg/Icons";
+import { ArrowIcon } from "../../../../assets/svg/ArrowIcon";
 
 
 export const UserNavProfile = () => {
@@ -44,6 +46,7 @@ export const UserNavProfile = () => {
                 <Stack className={styles.userProfile} align='center' gap='12'>
                     <Stack  className={styles.containerUserProfile} onClick={toggle}>
                         <Avatar email={user.email} firstName={user.firstName} lastName={user.lastName} size={45} />
+                        <SettingsIcon color="text_primary" className={styles.settingsIcon} size="17"/>
                     </Stack>
                     {!isMobile &&
                         <Stack direction='column' gap={i18n.language === 'ru' ? '4' : ''}>
@@ -56,6 +59,7 @@ export const UserNavProfile = () => {
                             <EditUserProfile onClose={close}/>
                         </Stack>
                     )}
+                    {/* <ArrowIcon color="text-primary"/> */}
                 </Stack>
             ) : (
                 <Stack align='center' gap='12'>

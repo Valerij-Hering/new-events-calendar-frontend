@@ -8,7 +8,7 @@ const config = {
   production: 'https://new-events-calendar-backend.onrender.com',
   develop: 'http://localhost:8000'
 }
-export const apiUrl = config.production
+export const apiUrl = config.production;
 
 
 export const userApi = api.injectEndpoints({

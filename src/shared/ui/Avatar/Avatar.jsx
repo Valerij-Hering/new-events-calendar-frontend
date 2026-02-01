@@ -18,7 +18,7 @@ export const Avatar = ({ email, firstName, lastName, size = 40 }) => {
                 backgroundColor: bgColor,
             }}
         >
-        <Text color='text-inverse' size='20' fontStyle="poppins400">{initials}</Text>
+        <Text color='text-inverse' size='20' fontStyle="poppins500">{initials}</Text>
         </Stack>
     );
 };

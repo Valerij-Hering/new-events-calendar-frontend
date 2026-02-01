@@ -12,7 +12,7 @@ const config = {
 }
 
 const AuthContext = createContext();
-const API_URL = config.production
+const API_URL = config.production;
 const REFRESH_INTERVAL = 10 * 60 * 1000;
 
 export const AuthProvider = ({ children }) => {
