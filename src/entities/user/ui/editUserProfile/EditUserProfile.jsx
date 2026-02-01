@@ -67,7 +67,7 @@ export const EditUserProfile = ({ onClose }) => {
         <Stack justify="between" align="center" fullWidth>
           <Button
             type="submit"
-            size="small"
+            size="medium"
             disabled={isLoading || !formState.isDirty}
           >
             {isLoading ? (

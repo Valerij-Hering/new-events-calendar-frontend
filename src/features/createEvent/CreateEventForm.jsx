@@ -129,6 +129,7 @@ export const CreateEventForm = ({ initialData, onClose }) => {
             <Stack gap="12" fullWidth>
                 <Stack className={getStyles(styles.containerTimePickerStart, { [styles.containerTimePickerStartDisabled]: allDay }, [])} fullWidth>
                 <TimePicker
+                    align="left"
                     label={t("input.label.Start Time")}
                     disabled={allDay}
                     value={start}
@@ -140,6 +141,7 @@ export const CreateEventForm = ({ initialData, onClose }) => {
 
                 <Stack className={getStyles(styles.containerTimePickerEnd, { [styles.containerTimePickerEndDisabled]: allDay || !watchStart }, [])} fullWidth>
                 <TimePicker
+                    align="right"
                     label={t("input.label.End Time")}
                     disabled={allDay || !watchStart}
                     value={end}

@@ -6,7 +6,7 @@ import { Stack } from '@/shared/ui/Stack/Stack';
 import { Button } from "../Button/Button";
 import { useTranslation } from "react-i18next";
 
-export const TimePicker = ({ label, onOk, onCancel, required, error, ...props }) => {
+export const TimePicker = ({ label, onOk, onCancel, required, error, align = "left", ...props }) => {
   const [time, setTime] = useState("");
   const [open, setOpen] = useState(false);
   const [selectedHour, setSelectedHour] = useState("00");
@@ -107,7 +107,7 @@ export const TimePicker = ({ label, onOk, onCancel, required, error, ...props })
       </Stack>
 
       {open && (
-        <div className={styles.pickerModal}>
+        <div className={styles.pickerModal}style={{left: align === "left" ? 0 : "auto", right: align === "right" ? 0 : "auto",}}>
           <Text className={styles.title} color='text-strong' fontStyle="poppins500">{t("timePicker.Select Time")}</Text>
 
           <Stack justify='center' align='center' className={styles.drumsWrapper}>
