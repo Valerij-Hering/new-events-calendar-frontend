@@ -4,11 +4,13 @@ import { Stack } from '@/shared/ui/Stack/Stack'
 import { Text } from "@/shared/ui/Text/Text"
 
 
-const getDayColor = ({ isToday, status, isPastDate }) => {
+const getDayColor = ({ isToday, status, isPastDate, isWeekend }) => {
   if (isToday) return "text-inverse";
   if (status === "active") return "text-inverse"; 
   if (status === "past") return "text-error";
-  if (isPastDate) return "text-secondary";       
+  if (isWeekend) return "text-accent-primary";  
+  if (isPastDate) return "text-secondary"; 
+    
   return "text-primary";                      
 };
 
@@ -19,6 +21,7 @@ export const CalendarCell = ({
   isToday,
   isSelected,
   isPastDate,
+  isWeekend,
   isHoliday,      
   onClick
 }) => {
@@ -41,7 +44,7 @@ export const CalendarCell = ({
         justify='center'
         align='center'
       >
-        <Text color={getDayColor({ isToday, status, isPastDate })} >
+        <Text color={getDayColor({ isToday, status, isWeekend, })} >
           {day}
         </Text>
         {eventCount > 0 && (

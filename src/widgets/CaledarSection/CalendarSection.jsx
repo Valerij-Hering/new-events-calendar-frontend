@@ -6,6 +6,7 @@ import styles from "./CalendarSection.module.scss";
 import { Loader } from "../../shared/ui/Loader/Loader";
 import { useAuth } from "../../features/auth/contexts/AuthContext"
 
+
 export const CalendarSection = () => {
 
   const { isAuthenticated } = useAuth();

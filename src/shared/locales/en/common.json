@@ -7,6 +7,9 @@
     "userNavProfil": {
         "Guest": "Guest"
     },
+    "editUserProfile": {
+        "Your data": "Your data:"
+    },
     "eventList": {
         "Your Events": "Your Events",
         "All Events": "All Events",
@@ -148,7 +151,9 @@
         "Delete": "Delete",
         "Resending...": "Resending...",
         "Please wait": "Please wait",
-        "Resend confirmation mail": "Resend confirmation mail"
+        "Resend confirmation mail": "Resend confirmation mail",
+        "Save": "Save",
+        "Saving...": "Saving..."
     },
     "input": {
         "placeholder": {

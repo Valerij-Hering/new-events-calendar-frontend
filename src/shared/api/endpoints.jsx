@@ -7,6 +7,7 @@ export const endpoints = {
     reset_password: "/reset-password",
     change_password: "/change-password",
     user: "/user",
+    updateUser: "/update-user",
     resend_activation: '/resend-activation',
 
     /** Events */

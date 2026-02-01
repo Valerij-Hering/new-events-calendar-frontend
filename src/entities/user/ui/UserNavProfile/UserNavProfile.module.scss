@@ -21,3 +21,13 @@
 .containerUserProfile:hover svg{
     fill: var(--color-accent-secondary);
 }
+
+.containerEditUserProfile {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+}
+
+.userProfile {
+    position: relative;
+}

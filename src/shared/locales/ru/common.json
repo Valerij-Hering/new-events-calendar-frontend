@@ -7,6 +7,9 @@
     "userNavProfil": {
         "Guest": "Гость"
     },
+    "editUserProfile": {
+        "Your data": "Ваши данные:"
+    },
     "eventList": {
         "Your Events": "Ваши события",
         "All Events": "Все события",
@@ -153,7 +156,9 @@
         "Delete": "Удалить",
         "Resending...": "Отправка...",
         "Please wait": "Пожалуйста, подождите",
-        "Resend confirmation mail": "Отправить письмо повторно"
+        "Resend confirmation mail": "Отправить письмо повторно",
+        "Save": "Сохранить",
+        "Saving...": "Сохранение..."
     },
     "input": {
         "placeholder": {

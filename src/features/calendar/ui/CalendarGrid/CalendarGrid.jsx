@@ -84,6 +84,7 @@ export const CalendarGrid = ({
                 isSelected={selectedDate === d.dateStr}
                 isPastDate={d.dateStr < todayStr}
                 isHoliday={d.isHoliday}
+                isWeekend={d.isWeekend}
                 onClick={() => handleSelectDate(d.dateStr)}
             />
             ))}

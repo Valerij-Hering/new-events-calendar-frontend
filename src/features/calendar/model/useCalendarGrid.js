@@ -35,18 +35,15 @@ export const useCalendarGrid = ({ currentDate, eventsByDate, locale }) => {
     for (let i = 1; i <= lastDay.getDate(); i++) {
       const date = new Date(year, month, i);
 
+      const dayOfWeek = date.getDay();
+      const isWeekend = dayOfWeek === 0 || dayOfWeek === 6;
+
       // Если день понедельник и не первый день месяца, увеличиваем weekIndex
       if ((date.getDay() + 6) % 7 === 0 && i !== 1) {
         weekIndex++;
       }
 
-      const dateStr =
-        year +
-        "-" +
-        String(month + 1).padStart(2, "0") +
-        "-" +
-        String(i).padStart(2, "0");
-
+      const dateStr = year + "-" + String(month + 1).padStart(2, "0") + "-" + String(i).padStart(2, "0");
       const events = eventsByDate[dateStr] || [];
 
       days.push({
@@ -58,6 +55,7 @@ export const useCalendarGrid = ({ currentDate, eventsByDate, locale }) => {
         isHoliday: Boolean(holidayMap[dateStr]),
         holiday: holidayMap[dateStr] ?? null,
         weekIndex, // 🔹 добавляем индекс недели
+        isWeekend
       });
     }
 

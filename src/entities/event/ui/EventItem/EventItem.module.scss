@@ -7,15 +7,13 @@
 }
 
 .eventItemActive {
-    max-width: 90%;
-    min-height: 120px;
+    margin-left: auto;
+    max-width: 95%;
+    min-height: 130px;
     padding: 15px;
     border-radius: var(--border-radius-8);
     background-color: #1db497;
     box-shadow: rgba(52, 121, 91, 0.4) 0rem 0.875rem 1.625rem -0.75rem, rgba(76, 175, 80, 0.15) 0rem 0.25rem 1.4375rem 0rem, rgba(76, 175, 80, 0.2) 0rem 0.5rem 0.625rem -0.3125rem;
-    @include mobile-768 {
-        max-width: 100%;
-    }
 
     &.eventItemPast {
         background-color: var(--color-bg-error);

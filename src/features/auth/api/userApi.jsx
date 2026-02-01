@@ -36,10 +36,17 @@ login: builder.mutation({
   }),
 }),
 
+    updateUser: builder.mutation({
+      query: (body) => createApiConfig({
+        method: "PUT",
+        url: endpoints.path.updateUser, // например: /api/user
+        body,
+      }),
+      invalidatesTags: ["User"], // чтобы обновился getUser
+    }),
+
     logout: builder.mutation({
-      queryFn: () => {
-        return { data: null };
-      }
+      queryFn: () => ({ data: null }),
     }),
 
     getUser: builder.query({
@@ -50,7 +57,8 @@ login: builder.mutation({
         } catch (err) {
           return { error: err };
         }
-      }
+      },
+      providesTags: ["User"],
     }),
 
     resetPassword: builder.mutation({
@@ -84,6 +92,7 @@ export const {
   useRegistrationMutation, 
   useLoginMutation, 
   useLogoutMutation,
+  useUpdateUserMutation,
   useGetUserQuery, 
   useResetPasswordMutation, 
   useChangePasswordMutation,

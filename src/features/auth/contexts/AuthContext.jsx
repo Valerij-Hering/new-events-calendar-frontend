@@ -6,8 +6,13 @@ import { useResendActivationEmailMutation } from "../api/userApi";
 import { store } from "../../../app/store/store";
 import { eventApi } from "../../../features/createEvent/api/eventApi"
 
+const config = {
+  production: 'https://new-events-calendar-backend.onrender.com',
+  develop: 'http://localhost:8000'
+}
+
 const AuthContext = createContext();
-const API_URL = 'https://new-events-calendar-backend.onrender.com'; //"http://localhost:8000"
+const API_URL = config.production
 const REFRESH_INTERVAL = 10 * 60 * 1000;
 
 export const AuthProvider = ({ children }) => {
@@ -23,6 +28,10 @@ export const AuthProvider = ({ children }) => {
     isUserLoading,
     resendActivationEmail,
   });
+
+  const updateUser = (user) => {
+  setUser(user);
+};
 
   // 🔹 axiosInstance мемоизирован
   const axiosInstance = useMemo(() => {
@@ -126,7 +135,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated, user, accessToken, login, logout, axiosInstance, isUserLoading }}>
+    <AuthContext.Provider value={{ isAuthenticated, user, updateUser, accessToken, login, logout, axiosInstance, isUserLoading }}>
       {children}
     </AuthContext.Provider>
   );

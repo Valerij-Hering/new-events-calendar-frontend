@@ -2,10 +2,10 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import Cookies from 'js-cookie';
 
 const config = {
-    production: '',
-    develop: 'https://new-events-calendar-backend.onrender.com', //'http://localhost:8000'
+    production: 'https://new-events-calendar-backend.onrender.com',
+    develop: 'http://localhost:8000', 
 }
-export const apiUrl = config.develop
+export const apiUrl = config.production
 
 export const api = createApi({
     reducerPath: 'api',
