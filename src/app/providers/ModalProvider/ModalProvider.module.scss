@@ -1,3 +1,5 @@
+@use '@/app/styles/media-queries.scss' as *;
+
 .overlay {
   position: fixed;
   inset: 0;
@@ -14,6 +16,9 @@
   border-radius: var(--border-radius-10);
   max-width: 500px;
   box-shadow: var(--shadow-elevation-modal);
+  @include mobile-768 {
+        max-width: 95%;
+    }
 }
 
 .modalLinkBtn {
