@@ -31,11 +31,11 @@ export const DesktopNavbar = () => {
             <Stack align='center' gap='24'>
                 <LanguageSwitcher />
                 {isAuthenticated ? (
-                    <Button variant='raised' size={isMobile ? 'small' : 'medium'} onClick={handleLogout}>
+                    <Button variant='raised' size='medium' onClick={handleLogout}>
                         {t('button.Log Out')}
                     </Button>
                 ) : (
-                    <Button variant='raised' size={isMobile ? 'small' : 'medium'} onClick={handleLogIn}>
+                    <Button variant='raised' size='medium' onClick={handleLogIn}>
                         {t('button.Log In')}
                     </Button>
                 )}
