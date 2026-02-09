@@ -45,6 +45,20 @@ login: builder.mutation({
       invalidatesTags: ["User"], // чтобы обновился getUser
     }),
 
+    updateAvatar: builder.mutation({
+      query: (file) => {
+        const formData = new FormData();
+        formData.append("avatar", file);
+
+        return createApiConfig({
+          method: "PUT",
+          url: endpoints.path.updateUserAvatar, // например: /api/user/avatar
+          body: formData,
+        });
+      },
+      invalidatesTags: ["User"], // чтобы getUser обновился
+    }),
+
     logout: builder.mutation({
       queryFn: () => ({ data: null }),
     }),
@@ -93,6 +107,7 @@ export const {
   useLoginMutation, 
   useLogoutMutation,
   useUpdateUserMutation,
+  useUpdateAvatarMutation,
   useGetUserQuery, 
   useResetPasswordMutation, 
   useChangePasswordMutation,

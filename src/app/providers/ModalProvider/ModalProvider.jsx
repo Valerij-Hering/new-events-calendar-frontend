@@ -1,18 +1,18 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState, useEffect } from "react";
 import { Stack } from "@/shared/ui/Stack/Stack";
 import { Button } from "@/shared/ui/Button/Button";
 import { Text } from "@/shared/ui/Text/Text";
 import { CheckCircleIcon, XCircleIcon, InfoCircleIcon, QuestionIcon } from "@/assets/svg/Icons";
 import styles from "./ModalProvider.module.scss";
 import { useTranslation } from "react-i18next";
-
+import { useBodyScrollLock } from "@/shared/hooks/useBodyScrollLock";
 
 const ModalContext = createContext();
 export const useModal = () => useContext(ModalContext);
 
 export const ModalProvider = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [type, setType] = useState("success"); // 👈 тип
+  const [type, setType] = useState("success");
   const [title, setTitle] = useState("");
   const [message1, setMessage1] = useState("");
   const [message2, setMessage2] = useState("");
@@ -21,6 +21,13 @@ export const ModalProvider = ({ children }) => {
   const [buttonColor, setButtonColor] = useState("blue");
 
   const { t } = useTranslation("common");
+  const { lockScroll, unlockScroll } = useBodyScrollLock();
+
+  // Блокируем скролл при открытии модалки и восстанавливаем при закрытии
+  useEffect(() => {
+    if (isOpen) lockScroll();
+    else unlockScroll();
+  }, [isOpen, lockScroll, unlockScroll]);
 
   const openModal = ({
     title,
@@ -84,7 +91,7 @@ export const ModalProvider = ({ children }) => {
             <Stack gap="24">
               {actionClick && (
                 <Button variant="filled" size="medium" color={buttonColor} onClick={handleAction}>
-                  { t(actionLabel)}
+                  {t(actionLabel)}
                 </Button>
               )}
               <Button variant="subtle" color="dark" size="medium" onClick={closeModal}>

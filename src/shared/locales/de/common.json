@@ -10,6 +10,10 @@
     "editUserProfile": {
         "Your data": "Ihre Daten:"
     },
+    "avatarCropper": {
+        "Change avatar": "Profilbild ändern",
+        "Upload image": "Foto hochladen"
+    },
     "eventList": {
         "Your Events": "Ihre Termine",
         "All Events": "Alle Termine",
@@ -151,7 +155,9 @@
         "Please wait": "Please wait",
         "Resend confirmation mail": "Resend confirmation mail",
         "Save": "Speichern",
-        "Saving...": "Speichert..."
+        "Saving...": "Speichert...",
+        "Add": "Hinzufügen",
+        "Add photo": "Foto hinzufügen"
     },
     "input": {
         "placeholder": {

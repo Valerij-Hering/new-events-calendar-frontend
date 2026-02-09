@@ -30,8 +30,8 @@ export const AuthProvider = ({ children }) => {
   });
 
   const updateUser = (user) => {
-  setUser(user);
-};
+    setUser(user);
+  };
 
   // 🔹 axiosInstance мемоизирован
   const axiosInstance = useMemo(() => {

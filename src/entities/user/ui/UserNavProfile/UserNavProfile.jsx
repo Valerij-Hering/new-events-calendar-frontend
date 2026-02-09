@@ -45,8 +45,8 @@ export const UserNavProfile = () => {
             { isAuthenticated && user ? (
                 <Stack className={styles.userProfile} align='center' gap='12'>
                     <Stack  className={styles.containerUserProfile} onClick={toggle}>
-                        <Avatar email={user.email} firstName={user.firstName} lastName={user.lastName} size={45} />
-                        <SettingsIcon color="text_primary" className={styles.settingsIcon} size="17"/>
+                        <Avatar image={user.avatarUrl} email={user.email} firstName={user.firstName} lastName={user.lastName} size={45} />
+                        <SettingsIcon color="text_primary" className={styles.settingsIcon} size="15"/>
                     </Stack>
                     {!isMobile &&
                         <Stack direction='column' gap={i18n.language === 'ru' ? '4' : ''}>

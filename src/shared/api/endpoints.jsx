@@ -8,6 +8,7 @@ export const endpoints = {
     change_password: "/change-password",
     user: "/user",
     updateUser: "/update-user",
+    updateUserAvatar: "/update-avatar",
     resend_activation: '/resend-activation',
 
     /** Events */
