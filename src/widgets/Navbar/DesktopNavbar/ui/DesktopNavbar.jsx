@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 import { useAuth } from "@/features/auth/contexts/AuthContext";
 import { UserNavProfile } from "../../../../entities/user/ui/UserNavProfile/UserNavProfile";
 import { useResize } from "../../../../shared/hooks/useResize";
+import { LogoutIcon } from "../../../../assets/svg/Icons";
 
 
 
@@ -28,15 +29,23 @@ export const DesktopNavbar = () => {
     return (
         <Stack tag="nav" className={styles.desktopNavbar} justify='between' align='center' fullWidth>
             <UserNavProfile/>
-            <Stack align='center' gap='24'>
+            <Stack align='center' gap='16'>
                 <LanguageSwitcher />
                 {isAuthenticated ? (
-                    <Button variant='raised' size='medium' onClick={handleLogout}>
-                        {t('button.Log Out')}
+                    <Button {...(isMobile ? { isIcon: true } : {})} variant='raised' size='medium' onClick={handleLogout}>
+                        {isMobile ?
+                            <LogoutIcon/>
+                        :
+                            t('button.Log Out')
+                        }
                     </Button>
                 ) : (
-                    <Button variant='raised' size='medium' onClick={handleLogIn}>
-                        {t('button.Log In')}
+                    <Button {...(isMobile ? { isIcon: true } : {})} variant='raised' size='medium' onClick={handleLogIn}>
+                        {isMobile ?
+                            <LogoutIcon/>
+                        :
+                            t('button.Log In')
+                        }
                     </Button>
                 )}
             </Stack>

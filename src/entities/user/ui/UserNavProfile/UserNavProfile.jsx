@@ -45,15 +45,15 @@ export const UserNavProfile = () => {
             { isAuthenticated && user ? (
                 <Stack className={styles.userProfile} align='center' gap='12'>
                     <Stack  className={styles.containerUserProfile} onClick={toggle}>
-                        <Avatar image={user.avatarUrl} email={user.email} firstName={user.firstName} lastName={user.lastName} size={45} />
+                        <Avatar image={user.avatarUrl} email={user.email} firstName={user.firstName} lastName={user.lastName} size={60} />
                         <SettingsIcon color="text_primary" className={styles.settingsIcon} size="15"/>
                     </Stack>
-                    {!isMobile &&
+                   
                         <Stack direction='column' gap={i18n.language === 'ru' ? '4' : ''}>
                             <Text>{user.firstName} {user.lastName}</Text>
                             <Text color='text-secondary' size='14'>{user.email}</Text>
                         </Stack>
-                    }
+                    
                     {isOpen && (
                         <Stack className={styles.containerEditUserProfile}>
                             <EditUserProfile onClose={close}/>

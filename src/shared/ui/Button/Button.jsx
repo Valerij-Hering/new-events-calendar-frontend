@@ -66,11 +66,12 @@ const COLOR_MAP = {
         href,
         fullWidth,
         noPadding, 
+        isIcon,
         ...otherProps
     } = props;
 
 
-    const isIcon = variant === "icon";
+
     // 👉 выбираем css-класс по цвету и варианту
     const resolvedColorClass = COLOR_MAP[color]?.[variant];
 
@@ -78,13 +79,14 @@ const COLOR_MAP = {
         className,
         styles[size],
         styles[variant],
-        styles[isIcon ? "icon" : variant],
+
         resolvedColorClass ? styles[resolvedColorClass] : null
     ];
 
     const mods = {
         [styles.fullWidth]: fullWidth,
         [styles.noPadding]: noPadding,
+        [styles.isIcon]: isIcon
     };
 
     const classes = getStyles(styles.button, mods, additional);

@@ -1,4 +1,4 @@
-
+@use '@/app/styles/media-queries.scss' as *;
 
 .addEventBtn {
     position: fixed;
@@ -8,6 +8,10 @@
     width: 45px;
     height: 45px;
     padding: 0;
+    @include mobile-768 {
+        bottom: 20px;
+        right: 20px;
+    }
 }
 
 .icon {

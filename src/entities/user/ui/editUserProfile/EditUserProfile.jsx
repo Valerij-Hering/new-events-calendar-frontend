@@ -28,11 +28,12 @@ export const EditUserProfile = ({ onClose }) => {
   const { register, handleSubmit, reset, formState } = useForm();
   const [updateUser, { isLoading }] = useUpdateUserMutation();
   const [updateAvatar, { isLoading: isAvatarLoading }] = useUpdateAvatarMutation();
-  const { t } = useTranslation('common');
+  const { t, i18n } = useTranslation('common');
   const { isMobile } = useResize();
   const { value: isOpen, toggle, setFalse: close } = useBoolean(false);
   const [draftAvatar, setDraftAvatar] = useState(null);
   const isAvatarDirty = Boolean(draftAvatar);
+
 
   useEffect(() => {
     if (user) {
@@ -79,9 +80,12 @@ const onSubmit = async (data) => {
   return (
     <Stack className={styles.EditUserProfile} align='center' justify="between" direction="column" gap='48' fullWidth>
         <Stack className={styles.editUserProfileHeader} direction="column" justify="center" align='center' gap='12' fullWidth>
-            <Stack className={styles.containerAvatar} direction="column" align="center" gap="4" onClick={toggle}>
+            <Stack direction="column" align="center" gap={8} onClick={toggle}>
               <Avatar email={user.email} firstName={user.firstName} lastName={user.lastName} size={110} image={draftAvatar || user.avatarUrl}/>
-              {/* <CameraIcon color="text_inverse" className={styles.cameraIcon} size={isMobile ? 20 : 15}/> */}
+              <Stack direction='column' align="center" >
+                            <Text color='text-inverse' size={18}>{user.firstName} {user.lastName}</Text>
+                            <Text className={styles.avatarEmail} color='text-inverse' size={14}>{user.email}</Text>
+                        </Stack>
               <Button size="small" variant="suttle" color="white">{t("button.Add photo")}</Button>
             </Stack>
 
