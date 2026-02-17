@@ -1,4 +1,4 @@
-
+@use '@/app/styles/media-queries.scss' as *;
 
 .claendarViewwitcher {
     position: relative;
@@ -17,6 +17,9 @@
     white-space: nowrap;
     background-color: var(--color-bg-modal);
     box-shadow: rgba(0, 0, 0, 0.146) 0rem 0.25rem 0.375rem -0.0625rem, rgba(0, 0, 0, 0.135) 0rem 0.125rem 0.25rem -0.0625rem;
+    @include mobile-768 {
+        left: 0px;
+    }
 }
 
 
