@@ -5,8 +5,7 @@ import { WeekView } from "../../features/calendar/ui/WeekView/ui/WeekView"
 import { YearCalendar } from "../../features/calendar/ui/YearCalendar/YearCalendar"
 import { Stack } from "../../shared/ui/Stack/Stack"
 import styles from "./CalendarViews.module.scss"
-import { Text } from "@/shared/ui/Text/Text";
-import { CalendarViewSwitcher } from "@/features/calendar/ui/calendarViewSwitcher/calendarViewSwitcher"
+import { CalendarViewSwitcher } from "../../features/calendar/ui/CalendarViewSwitcher/CalendarViewSwitcher"
 
 export const CalendarViews = (
     {viewMode,
