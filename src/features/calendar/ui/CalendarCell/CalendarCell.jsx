@@ -24,7 +24,9 @@ export const CalendarCell = ({
   isPastDate,
   isWeekend,
   isHoliday,      
-  onClick
+  onClick,
+  variant = "month",
+  
 }) => {
 
   return (
@@ -33,6 +35,7 @@ export const CalendarCell = ({
         className={getStyles(
           styles.cell,
           {
+            [styles.year]: variant === "year",
             [styles.selected]: isSelected,
             [styles.today]: isToday,
             [styles.active]: status === "active",
@@ -49,11 +52,11 @@ export const CalendarCell = ({
           {day}
         </Text>
         {eventCount > 0 && (
-          <Text className={styles.eventCount} style={{ backgroundColor: getDayColor(status) }} size='10' fontStyle="poppins600" tag='span' color='text-inverse'>
+          <Text className={getStyles(styles.eventCount,{[styles.year]: variant === "year"},[])} style={{ backgroundColor: getDayColor(status) }} size="10" fontStyle="poppins600" tag='span' color='text-inverse'>
             {eventCount}
           </Text>
         )}
-        {isHoliday && <span className={styles.holidayDot} />}
+        {isHoliday && <span className={getStyles(styles.holidayDot,{[styles.year]: variant === "year"},[])} />}
       </Stack>
     </Stack>
   );

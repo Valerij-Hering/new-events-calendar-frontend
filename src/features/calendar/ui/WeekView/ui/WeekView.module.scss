@@ -1,0 +1,137 @@
+.weekContainer {
+  width: 100%;
+  position: relative;
+  
+}
+
+
+.daysHeader {
+  display: grid;
+  grid-template-columns: 80px repeat(7, 1fr);
+  border-bottom: 1px solid #eee;
+}
+
+.dayHeader {
+  text-align: center;
+  padding: 8px;
+  font-size: 12px;
+  color: var(--color-text-primary);
+  font-family: var(--font-family-poppins-500);
+}
+
+.todayHeader {
+  color: var(--color-accent-secondary);
+  font-family: var(--font-family-poppins-500);
+}
+
+.gridWrapper {
+  display: grid;
+  grid-template-columns: 80px repeat(7, 1fr);
+  height: 500px;
+  overflow: auto;
+  position: relative;
+  scrollbar-width: thin;
+  scrollbar-color: #c1c1c185 transparent;
+
+    /* Chrome, Edge, Safari */
+    &::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: linear-gradient(90deg, #c1c1c1, #a8a8a8);
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(90deg, #9e9e9e, #7f7f7f);
+    }
+}
+
+.timeInner {
+  position: relative;
+  height: 1440px; /* 24 * 60 */
+}
+
+.timeColumn {
+  border-right: 1px solid #eee;
+}
+
+.hourRow {
+  min-height: 60px;
+}
+
+.timeCell {
+  height: 60px;
+  font-size: 12px;
+  padding: 4px;
+  color: #888;
+}
+
+.dayColumn {
+  position: relative;
+  border-right: 1px solid #f0f0f0;
+  height: 1440px; /* 24 * 60 */
+}
+
+.todayColumn {
+  background: rgba(29, 180, 151, 0.05);
+}
+
+.event {
+  position: absolute;
+  overflow: hidden;
+  background: #1db497;
+  color: white;
+  padding: 4px;
+  border-radius: 5px;
+  font-size: 12px;
+  border: 1px solid white;
+}
+
+.allDayEvent {
+  position: relative;      // чтобы не конфликтовать с grid
+  background-color: #4a90e2;  // синий фон для всех-день
+  color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Прошедшие события (красным выделяем) */
+.pastEvent {
+  background: var(--palette-red-500);
+  color: var(--color-text-error);
+
+}
+
+.nowLine {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1.5px;
+  background: red;
+  z-index: 10;
+}
+
+.nowTimeLabel {
+  color: var(--color-text-inverse);
+  font-size: 12px;
+  font-weight: 600;
+  background:  var(--color-bg-error);
+  width: 40px;
+  padding: 2px 0;
+  z-index: 11;
+  border-radius: var(--border-radius-5);
+}

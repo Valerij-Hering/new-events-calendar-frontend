@@ -5,7 +5,10 @@
     background-color: var(--color-bg-primary);
     height: 628px;
     padding: 20px;
-    padding-top: 7px;
+    overflow: hidden;
+    &.year {
+        height: 740px;
+    }
     @include tablet-1024 {
         max-width: 100%;
         padding: 0;
@@ -18,22 +21,22 @@
     }
 }
 
-.title {
-    margin-top: 27px;
-}
 
 .header {
+    min-height: 55px;
+
     padding-bottom: 10px;
 }
 
 .allEventsContainer {
     overflow-x: auto;
     flex-wrap: nowrap;
-    border-radius: var(--border-radius-10);
     min-height: 519px;
     padding-bottom: 60px;
-    &::-webkit-scrollbar {
-        display: none;
+    /* Firefox */
+    scrollbar-width: none;
+    &.year {
+        min-height: 680px;
     }
 }
 

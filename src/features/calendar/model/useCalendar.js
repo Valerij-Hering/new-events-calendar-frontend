@@ -3,8 +3,9 @@ import { useState } from "react";
 
 export const useCalendar = () => {
     const [currentDate, setCurrentDate] = useState(new Date());
-    const [selectedDate, setSelectedDate] = useState(null);
+    const [selectedDate, setSelectedDate] = useState(new Date());
     const [selectedHoliday, setSelectedHoliday] = useState(null); 
+
 
     // функция для перехода на предыдущий месяц
     const prevMonth = () => {

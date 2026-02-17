@@ -26,7 +26,7 @@ export const AddEventButton = () => {
             <Button 
                 className={styles.addEventBtn} 
                 onClick={handleAddEvent}
-                variant='raised'
+                
             >
                 <EditCircleIcon size={30}/>
             </Button>

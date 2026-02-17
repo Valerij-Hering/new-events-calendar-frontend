@@ -15,6 +15,10 @@
         "Upload image": "Foto hochladen"
     },
     "eventList": {
+        "day": "Tag",
+        "week": "Woche",
+        "month": "Monat",
+        "year": "Jahr",
         "Your Events": "Ihre Termine",
         "All Events": "Alle Termine",
         "Show all events": "Alle anzeigen",

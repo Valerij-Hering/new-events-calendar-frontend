@@ -15,9 +15,13 @@
         "Upload image": "Загрузить фото"
     },
     "eventList": {
+        "day": "День",
+        "week": "Неделя",
+        "month": "Месяц",
+        "year": "Год",
         "Your Events": "Ваши события",
         "All Events": "Все события",
-        "Show all events": "Показать все",
+        "Show all events": "Все события",
         "No events": "У вас пока нет событий",
         "Loading events...": "Загрузка событий...",
         "Error loading events": "Ошибка при загрузке событий",

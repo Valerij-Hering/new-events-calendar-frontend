@@ -11,6 +11,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  &.year {
+    border: 1px solid transparent;
+    max-width: 100%;   // 👈 компактный размер для года
+    padding: 3px;
+    font-size: 11px;
+    aspect-ratio: none;
+  }
     @include mobile-768 {
       max-width: 100%;
     }
@@ -42,6 +49,9 @@
 
   &.selected {
     border: 1.5px solid var(--color-accent-secondary);
+    &.year {
+      border: 1px solid var(--color-accent-secondary);
+    }
 
     &.pastDate {
   color: var(--color-text-secondary); // серый цвет для прошедших дат
@@ -51,15 +61,24 @@
     // если выбранная дата активная
     &.active {
       border: 1.5px solid var(--palette-green-900);
+      &.year {
+      border: 1px solid var(--palette-green-900);
+    }
     }
 
     // если выбранная дата прошедшая
     &.past {
       border: 1.5px solid var(--color-bg-error);
+      &.year {
+      border: 1px solid var(--color-bg-error);
+    }
     }
 
     &.today {
     border: 1.5px solid var(--color-accent-secondary);
+    &.year {
+      border: 1px solid var(--color-accent-secondary);
+    }
   }
   }
 }
@@ -76,6 +95,14 @@
   border-radius: 50px;
   border: 2px solid var(--color-text-inverse);
   background-color: var(--palette-red-700);
+  &.year {
+    width: 13px;
+    height: 13px;
+    right: -5px;
+    top: -5px;
+    font-size: 5px;
+    border: 1px solid var(--color-text-inverse);
+  }
 }
 
 .holidayDot {
@@ -86,4 +113,9 @@
   border-radius: 50%;
   background: orange;
   margin-top: 2px;
+  &.year {
+    width: 4px;
+    height: 4px;
+    bottom: 0px;
+  }
 }

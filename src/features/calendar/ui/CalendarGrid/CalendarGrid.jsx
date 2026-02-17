@@ -6,8 +6,8 @@ import { ArrowIcon } from "@/assets/svg/ArrowIcon";
 import { Button } from "@/shared/ui/Button/Button";
 import { useCalendarGrid } from "../../model/useCalendarGrid";
 import { useTranslation } from "react-i18next";
-import { formatEventHolidayLabel } from "../../model/formatEventHolidayLabel";
-import { CurrentDateTime } from "../../../../widgets/currentDateTime/ui/CurrentDateTime";
+import { getStyles } from "@/shared/lib/getStyles";
+
 
 
 export const CalendarGrid = ({
@@ -17,14 +17,14 @@ export const CalendarGrid = ({
     onSelectDate,
     prevMonth,
     nextMonth,
-    selectedHoliday, // выбранный праздник
+    variant = "month",
     }) => {
     const { i18n, t } = useTranslation("common");
     const lang = i18n.language || "en";
 
     const monthNames = {
         en: ["January","February","March","April","May","June","July","August","September","October","November","December"],
-        ru: ["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"],
+        ru: ["январь","февраль","март","апрель","май","июнь","июль","август","сентябрь","октябрь","ноябрь","декабрь"],
         de: ["Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"],
     };
 
@@ -45,34 +45,45 @@ export const CalendarGrid = ({
         onSelectDate(dateStr, holiday);
     };
 
-    // праздник сегодняшнего дня
-    const todayHoliday = days.find(d => d.dateStr === todayStr)?.holiday ?? null;
-
 
     return (
-        <Stack className={styles.containerCalendarGrid} direction="column" align="center" gap="24" fullWidth>
+        <Stack className={getStyles(styles.containerCalendarGrid,{[styles.year]: variant === "year"},[])} direction="column" align="center" gap={variant === "year" ? "0" : "24"}  {...(variant === "month" ? { fullWidth: true } : {})}>
 
         {/* HEADER */}
         <Stack fullWidth>
             <Stack align="center" justify="between" fullWidth>
-                <Stack className={styles.containerHeader} align="center" justify="between" fullWidth>
+                <Stack  align="center" gap="8">
+                    { variant === "month" &&(
                     <Button onClick={prevMonth} variant="clear" noPadding>
                         <ArrowIcon rotate="left" size="25" />
                     </Button>
-                    <Text className={styles.monthYears} color="text-primary" size="14" fontStyle="poppins500">
-                        {monthNames[lang][month]} 
+                    )}
+                    <Text className={styles.monthYears} size="16" fontStyle="poppins500">
+                        {monthNames[lang][month]} {variant === "month" && year} 
                     </Text>
+                { variant === "month" &&(
                     <Button onClick={nextMonth} variant="clear" noPadding>
                         <ArrowIcon rotate="right" size="25" />
                     </Button>
+                )}
                 </Stack>
-                <Text color="text-primary" fontStyle="poppins500">{year}</Text>
+                
             </Stack>
         </Stack>
-
+        
         {/* GRID */}
-        <Stack className={styles.containerCells} gap="24" fullWidth>
-            {daysOfWeek[lang].map(d => <Text key={d} fontStyle="poppins500">{d}</Text>)}
+        <Stack className={getStyles(styles.containerCells,{[styles.year]: variant === "year"},[])} gap={24} fullWidth>
+            {variant === "month" &&
+                daysOfWeek[lang].map(d => (
+                    <Text
+                    key={d}
+                    fontStyle="poppins500"
+                    size="16"
+                    >
+                    {d}
+                    </Text>
+                ))
+            }
             {emptyCells.map((_, i) => <Stack key={`empty-${i}`} />)}
             {days.map(d => (
             <CalendarCell
@@ -86,29 +97,10 @@ export const CalendarGrid = ({
                 isHoliday={d.isHoliday}
                 isWeekend={d.isWeekend}
                 onClick={() => handleSelectDate(d.dateStr)}
+                variant={variant}
             />
             ))}
         </Stack>
-        {/* Постоянный лейбл праздника сегодняшнего дня */}
-        {todayHoliday && (
-        <Stack align="center" gap="8" className={styles.todayHolidayBanner}>
-            <Text tag="span" className={styles.holidayDot} />
-            <Text color="text-primary" fontStyle="poppins400">
-            {t("eventItem.remaining.today")} – {todayHoliday.name}
-            {todayHoliday.isOffDay ? " (Выходной)" : ""}
-            </Text>
-        </Stack>
-        )}
-        {/* HOLIDAY LABEL */}
-        {selectedHoliday && selectedDate && selectedDate !== todayStr && (
-        <Stack align='center' gap='8'>
-            <Text tag='span' className={styles.holidayDot}/>
-            <Text className={styles.holidayLabel} color="text-primary">
-            {formatEventHolidayLabel(selectedDate, selectedHoliday, lang, false, t)}
-            </Text>
-        </Stack>
-        )}
-        <CurrentDateTime/>
         </Stack>
     );
 };

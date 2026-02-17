@@ -15,6 +15,10 @@
         "Upload image": "Upload image"
     },
     "eventList": {
+        "day": "Day",
+        "week": "Week",
+        "month": "Month",
+        "year": "Year",
         "Your Events": "Your Events",
         "All Events": "All Events",
         "Show all events": "Show all",
