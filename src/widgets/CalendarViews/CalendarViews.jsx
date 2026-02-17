@@ -6,7 +6,7 @@ import { YearCalendar } from "../../features/calendar/ui/YearCalendar/YearCalend
 import { Stack } from "../../shared/ui/Stack/Stack"
 import styles from "./CalendarViews.module.scss"
 import { Text } from "@/shared/ui/Text/Text";
-import { CalendarViewSwitcher } from "../../features/calendar/ui/calendarViewSwitcher/calendarViewSwitcher"
+import { CalendarViewSwitcher } from "@/features/calendar/ui/calendarViewSwitcher/calendarViewSwitcher"
 
 export const CalendarViews = (
     {viewMode,

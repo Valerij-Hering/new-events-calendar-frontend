@@ -17,8 +17,6 @@ import { CurrentDateTime } from "../../../../widgets/currentDateTime/ui/CurrentD
 import { useCalendarGrid } from "../../model/useCalendarGrid";
 import { Text } from "@/shared/ui/Text/Text"
 import { formatEventHolidayLabel } from "../../model/formatEventHolidayLabel";
-import { DayView } from "../DayView/ui/DayView";
-import { WeekView } from "../WeekView/ui/WeekView";
 import { CalendarViews } from "../../../../widgets/CalendarViews/CalendarViews";
 
 
