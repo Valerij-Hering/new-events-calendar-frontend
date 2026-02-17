@@ -1,0 +1,68 @@
+
+
+.claendarViewwitcher {
+    position: relative;
+}
+
+.viewSwitcherModal {
+    width: 160px;
+    margin-top: 10px;
+    position: absolute;
+    left: 50%;              // центр относительно родителя
+    transform: translateX(-50%); 
+    top: 27px;
+    padding: 5px;
+    border-radius: 7px;
+    z-index: 10 !important;
+    white-space: nowrap;
+    background-color: var(--color-bg-modal);
+    box-shadow: rgba(0, 0, 0, 0.146) 0rem 0.25rem 0.375rem -0.0625rem, rgba(0, 0, 0, 0.135) 0rem 0.125rem 0.25rem -0.0625rem;
+}
+
+
+.switcherModalBtn {
+    padding: 7px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.switcherModalBtn:hover {
+    background-color: #3780ff;
+}
+
+.switcherModalBtn:hover span {
+    color: white;
+}
+
+.switcherModalBtn:hover .checkIcon{
+    fill: white;
+}
+
+.switcherModalBtn-selected {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    font-weight: 400;
+    width: 130px;
+    padding: 7px;
+    text-indent: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #3780ff;
+}
+
+.switcherModalBtn-selected:hover {
+    background-color: #3780ff;
+    color: white;
+}
+
+.switcherModalBtn-selected ion-icon {
+    margin-left: auto;
+    --ionicon-stroke-width: 55px;
+    margin-top: 2px;
+}
+
+
+.switcherModalBtnChange_btn {
+    cursor: pointer;
+}
