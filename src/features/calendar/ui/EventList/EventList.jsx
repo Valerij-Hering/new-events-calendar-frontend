@@ -21,6 +21,7 @@ export const EventList = ({
   const showAll = useBoolean(true);
   const { t } = useTranslation("common");
   const { isAuthenticated } = useAuth();
+  
 
   // 🔹 если выбрали дату — выключаем "All events"
   useEffect(() => {
@@ -28,6 +29,18 @@ export const EventList = ({
       showAll.setFalse();
     }
   }, [selectedDate]);
+
+  useEffect(() => {
+  if (!selectedDate) return;
+
+  const isStringDate = typeof selectedDate === "string";
+
+  if (isStringDate) {
+    showAll.setFalse();   // клик по дате
+  } else {
+    showAll.setTrue();    // перелистывание / дефолт
+  }
+}, [selectedDate]);
 
   // 🔹 видимые события
   const visibleEvents = useMemo(() => {

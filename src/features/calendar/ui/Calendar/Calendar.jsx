@@ -40,6 +40,8 @@ export const Calendar = ({ events, isLoading, isError, }) => {
   const [viewMode, setViewMode] = useState("month");
   const lang = i18n.language || "en";
 
+  console.log(selectedDate)
+
   useEffect(() => {
     const interval = setInterval(() => {
       setNow(new Date());
