@@ -1,0 +1,8 @@
+@use '@/app/styles/media-queries.scss' as *;
+
+.containerMnthGrid {
+    @include mobile-768 {
+        max-width: 95%;
+        margin: 0 auto;
+    }
+}
