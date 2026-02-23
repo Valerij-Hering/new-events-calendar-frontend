@@ -4,19 +4,18 @@ import { Button } from "@/shared/ui/Button/Button";
 import { ArrowIcon } from "@/assets/svg/ArrowIcon";
 import { useYearCalendar } from "../../model/useYearCalendar";
 import { Text } from "@/shared/ui/Text/Text";
-import { useResize } from "../../../../shared/hooks/useResize";
-import styles from "./YearCalendar.module.scss"
 
 
 
 export const YearCalendar = ({ eventsByDate, selectedDate, onSelectDate }) => {
     const { year, prevYear, nextYear } = useYearCalendar();
+
     const months = Array.from({ length: 12 }, (_, i) => i);
 
     return (
         <Stack direction="column" gap="16">
         {/* Навигация по годам */}
-        <Stack justify="center" align="center" gap="8" >
+        <Stack justify="center" align="center" gap="8">
             <Button variant="clear" noPadding onClick={prevYear}>
                 <ArrowIcon rotate="left" size="25" />
             </Button>
@@ -27,7 +26,7 @@ export const YearCalendar = ({ eventsByDate, selectedDate, onSelectDate }) => {
         </Stack>
 
         {/* 12 месяцев */}
-        <Stack className={styles.containerMnthGrid} justify="between" wrap gap="24">
+        <Stack justify="between" wrap gap="32">
             {months.map((month) => (
             <CalendarGrid
                 key={month}
